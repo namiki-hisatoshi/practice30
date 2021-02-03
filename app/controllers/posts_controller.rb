@@ -3,9 +3,12 @@ class PostsController < ApplicationController
   end
 
   def new
+    @post = Post.new
   end
 
   def create
+    post = Post.create(params[:id])
+    redirect_to post
   end
 
   def edit
@@ -15,5 +18,10 @@ class PostsController < ApplicationController
   end
 
   def destroy
+  end
+
+  private
+  def post_params
+    params.require(:post).permit(:title, :content)
   end
 end
