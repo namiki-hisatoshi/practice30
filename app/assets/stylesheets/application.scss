@@ -14,6 +14,12 @@
  *= require_self
  */
 
+ @import "bootstrap/scss/bootstrap"
+
+ $fa-font-path: '@fontawesome/fontawesome-free/webfonts';
+ @import "@fontawesome/fontawesome-free/scss/fontawesome";
+ @import "@fontawesome/fontawesome-free/scss/regular";
+
 div.field_with_errors {
   display: contents;
 }
