@@ -11,8 +11,14 @@
   </head>
 
   <body>
+    <header>
     <%= render "layouts/header" %>
-    <%= render "layouts/flash" %>
-    <%= yield %>
+    </header>
+    <main>
+      <%= render "layouts/flash" %>
+      <div class="base-container">
+        <%= yield %>
+      </div>
+    </main>
   </body>
 </html>
